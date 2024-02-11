@@ -50,21 +50,12 @@ func (cm *cliManager) DefiningFlags() {
 // Определение путей для создание папок и файлов
 func (cm *cliManager) DefiningPaths() {
 	PathToProjectAndName = fmt.Sprintf("%s%s", Path_to_new_project, Project_name)
-	fmt.Printf(" PathToProjectAndName = %s \n", PathToProjectAndName)
 	PathToCmd = fmt.Sprintf("%s/%s", PathToProjectAndName, constants.Cmd)
-	fmt.Printf(" PathToCmd = %s \n", PathToCmd)
 	PathToMain = fmt.Sprintf("%s/%s", PathToCmd, constants.Cmd_main)
-	fmt.Printf(" PathToMain = %s \n", PathToMain)
 	PathToInternal = fmt.Sprintf("%s/%s", PathToProjectAndName, constants.Internal)
-	fmt.Printf("PathToInternal = %s \n", PathToInternal)
 	PathToPkg = fmt.Sprintf("%s/%s", PathToProjectAndName, constants.Pkg)
-	fmt.Printf(" PathToPkg = %s \n", PathToPkg)
 	PathToAppFile = fmt.Sprintf("%s/%s", PathToMain, constants.App_golang)
-	fmt.Printf(" PathToAppFile = %s \n", PathToAppFile)
 	PathToConfigModule = fmt.Sprintf("%s/%s", PathToInternal, "config")
-	fmt.Printf(" PathToConfigModule = %s \n", PathToConfigModule)
 	PathToConfigGoFile = fmt.Sprintf("%s/%s", PathToConfigModule, constants.Config)
-	fmt.Printf(" PathToConfigGoFile = %s \n", PathToConfigGoFile)
-	PathToConfigYml = fmt.Sprintf("%s/%s", Path_to_new_project, "config.yml")
-	fmt.Printf(" PathToConfigYml = %s \n", PathToConfigYml)
+	PathToConfigYml = fmt.Sprintf("%s/%s", PathToProjectAndName, "config.yml")
 }
